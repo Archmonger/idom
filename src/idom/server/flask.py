@@ -23,12 +23,12 @@ from geventwebsocket.websocket import WebSocket
 from typing_extensions import TypedDict
 
 import idom
-from idom.config import IDOM_CLIENT_BUILD_DIR, IDOM_DEBUG_MODE
+from idom.config import IDOM_DEBUG_MODE, IDOM_WED_MODULES_DIR
 from idom.core.component import AbstractComponent, ComponentConstructor
 from idom.core.dispatcher import dispatch_single_view
 from idom.core.layout import LayoutEvent, LayoutUpdate
 
-from .utils import threaded, wait_on_event
+from .utils import CLIENT_BUILD_DIR, threaded, wait_on_event
 
 
 logger = logging.getLogger(__name__)
@@ -137,7 +137,11 @@ def _setup_common_routes(blueprint: Blueprint, config: Config) -> None:
 
         @blueprint.route("/client/<path:path>")
         def send_build_dir(path: str) -> Any:
-            return send_from_directory(str(IDOM_CLIENT_BUILD_DIR.current), path)
+            return send_from_directory(str(CLIENT_BUILD_DIR), path)
+
+        @blueprint.route("/modules/<path:path>")
+        def send_build_dir(path: str) -> Any:
+            return send_from_directory(str(IDOM_WED_MODULES_DIR.current), path)
 
         if config["redirect_root_to_index"]:
 

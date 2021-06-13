@@ -10,8 +10,7 @@ except _DistributionNotFound:  # pragma: no cover
 
 __author__ = "idom-team"
 
-from . import config, log
-from .client.module import Import, Module, install
+from . import config, log, web
 from .core import hooks
 from .core.component import Component, component
 from .core.events import Events, event

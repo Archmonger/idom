@@ -173,7 +173,9 @@ class VdomDictConstructor(Protocol):
         ...
 
 
-def make_vdom_constructor(tag: str, allow_children: bool = True) -> VdomDictConstructor:
+def make_vdom_constructor(
+    tag: str, allow_children: bool = True, import_source: _ImportSourceArg = None
+) -> VdomDictConstructor:
     """Return a constructor for VDOM dictionaries with the given tag name.
 
     The resulting callable will have the same interface as :func:`vdom` but without its
@@ -184,7 +186,6 @@ def make_vdom_constructor(tag: str, allow_children: bool = True) -> VdomDictCons
         *attributes_and_children: _AttributesAndChildrenArg,
         key: str = "",
         event_handlers: _EventHandlersArg = None,
-        import_source: _ImportSourceArg = None,
     ) -> VdomDict:
         model = vdom(
             tag,
