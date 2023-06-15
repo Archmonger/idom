@@ -14,6 +14,7 @@ from reactpy.types import RootComponentConstructor
 logger = logging.getLogger(__name__)
 
 SUPPORTED_BACKENDS = (
+    "blacksheep",
     "fastapi",
     "sanic",
     "tornado",

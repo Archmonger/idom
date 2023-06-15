@@ -36,8 +36,12 @@ dependencies = [
   "lxml >=4",
 ]
 [project.optional-dependencies]
-all = ["reactpy[starlette,sanic,fastapi,flask,tornado,testing]"]
+all = ["reactpy[blacksheep,starlette,sanic,fastapi,flask,tornado,testing]"]
 
+blacksheep = [
+  "blacksheep >=1.0.0",
+  "uvicorn[standard] >=0.19.0",
+]
 starlette = [
   "starlette >=0.13.6",
   "uvicorn[standard] >=0.19.0",

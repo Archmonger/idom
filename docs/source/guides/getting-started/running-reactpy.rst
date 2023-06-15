@@ -90,6 +90,19 @@ Then assuming you put this in ``main.py``, you can run the application using the
     uvicorn main:app
 
 
+Running with `Blacksheep <https://www.neoteroi.dev/blacksheep/>`__
+................................................................
+
+.. reactpy:: _examples/run_blacksheep
+
+Then assuming you put this in ``main.py``, you can run the application using the
+`Uvicorn <https://www.uvicorn.org/>`__ ASGI server:
+
+.. code-block:: bash
+
+    uvicorn main:app
+
+
 Running with `Tornado <https://www.tornadoweb.org/en/stable/>`__
 ................................................................
 

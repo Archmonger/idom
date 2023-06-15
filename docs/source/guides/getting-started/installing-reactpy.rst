@@ -30,13 +30,9 @@ install`` command above with one of the options below:
 - ``flask`` - https://palletsprojects.com/p/flask/
 - ``sanic`` - https://sanicframework.org
 - ``starlette`` - https://www.starlette.io/
+- ``blacksheep`` - https://www.neoteroi.dev/blacksheep/
 - ``tornado`` - https://www.tornadoweb.org/en/stable/
 
-If you need to, you can install more than one option by separating them with commas:
-
-.. code-block:: bash
-
-    pip install "reactpy[fastapi,flask,sanic,starlette,tornado]"
 
 Once this is complete you should be able to :ref:`run ReactPy <Running ReactPy>` with your
 chosen implementation.
