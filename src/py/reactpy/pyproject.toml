@@ -108,7 +108,7 @@ all = ["types"]
 work_dir = "../../js"
 out_dir = "reactpy/_static"
 commands = ["npm ci", "npm run build"]
-artifacts = ["app/dist/"]
+artifacts = ["dist/"]
 
 # --- Pytest ---------------------------------------------------------------------------
 
